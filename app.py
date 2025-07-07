@@ -2,10 +2,22 @@ import streamlit as st
 import pickle
 import pandas as pd
 import requests
+import gdown
+import os
 
 # Load data
 movies_df = pickle.load(open('movies.pkl', 'rb'))  # Ensure 'movie_id' column exists
-similarity = pickle.load(open('similarity.pkl', 'rb'))
+
+# Download similarity.pkl if not exists
+if not os.path.exists("similarity.pkl"):
+    file_id = "1LsHPt7icFVdqVGPp9dZT2bYDlxoZkNk9"  # Replace with your actual ID
+    url = f"https://drive.google.com/uc?id={file_id}"
+    gdown.download(url, "similarity.pkl", quiet=False)
+
+# Now load the pickle file
+with open("similarity.pkl", "rb") as f:
+    similarity = pickle.load(f)
+
 
 # Extract titles for selectbox
 movie_titles = movies_df['title'].values

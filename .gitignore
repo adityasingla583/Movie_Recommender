@@ -1,1 +1,8 @@
-venv
+# Ignore everything
+*
+
+# Allow only these files
+!app.py
+!movies.pkl
+!requirements.txt
+!.gitignore
