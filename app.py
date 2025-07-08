@@ -27,7 +27,7 @@ DUMMY_POSTER = "https://upload.wikimedia.org/wikipedia/commons/6/65/No-Image-Pla
 
 # Fetch poster from TMDb API
 def poster_fetch(movie_id):
-    url = f"https://api.themoviedb.org/3/movie/{movie_id}?api_key=1f29badfa0769c4ca3c9f02a5804554a"
+    url = f"https://api.themoviedb.org/3/movie/{movie_id}?api_key={}"
     try:
         headers = {
             "User-Agent": "Mozilla/5.0",
