@@ -10,7 +10,7 @@ movies_df = pickle.load(open('movies.pkl', 'rb'))  # Ensure 'movie_id' column ex
 
 # Download similarity.pkl if not exists
 if not os.path.exists("similarity.pkl"):
-    file_id = "{}"  # Replace with your actual ID
+    file_id = "1LsHPt7icFVdqVGPp9dZT2bYDlxoZkNk9"  # Replace with your actual ID
     url = f"https://drive.google.com/uc?id={file_id}"
     gdown.download(url, "similarity.pkl", quiet=False)
 
@@ -27,7 +27,7 @@ DUMMY_POSTER = "https://upload.wikimedia.org/wikipedia/commons/6/65/No-Image-Pla
 
 # Fetch poster from TMDb API
 def poster_fetch(movie_id):
-    url = f"https://api.themoviedb.org/3/movie/{movie_id}?api_key={}"
+    url = f"https://api.themoviedb.org/3/movie/{movie_id}?api_key=1f29badfa0769c4ca3c9f02a5804554a"
     try:
         headers = {
             "User-Agent": "Mozilla/5.0",
