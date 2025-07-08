@@ -10,7 +10,7 @@ movies_df = pickle.load(open('movies.pkl', 'rb'))  # Ensure 'movie_id' column ex
 
 # Download similarity.pkl if not exists
 if not os.path.exists("similarity.pkl"):
-    file_id = "1LsHPt7icFVdqVGPp9dZT2bYDlxoZkNk9"  # Replace with your actual ID
+    file_id = "{}"  # Replace with your actual ID
     url = f"https://drive.google.com/uc?id={file_id}"
     gdown.download(url, "similarity.pkl", quiet=False)
 
